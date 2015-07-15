@@ -1,0 +1,29 @@
+<h1>Listing ruby_buzzs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>Submission</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ruby_buzzs.each do |ruby_buzz| %>
+      <tr>
+        <td><%= ruby_buzz.question %></td>
+        <td><%= ruby_buzz.answer %></td>
+        <td><%= ruby_buzz.submission %></td>
+        <td><%= link_to 'Show', ruby_buzz %></td>
+        <td><%= link_to 'Edit', edit_ruby_buzz_path(ruby_buzz) %></td>
+        <td><%= link_to 'Destroy', ruby_buzz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ruby buzz', new_ruby_buzz_path %>

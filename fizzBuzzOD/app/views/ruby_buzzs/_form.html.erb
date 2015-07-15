@@ -1,0 +1,29 @@
+<%= form_for(@ruby_buzz) do |f| %>
+  <% if @ruby_buzz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ruby_buzz.errors.count, "error") %> prohibited this ruby_buzz from being saved:</h2>
+
+      <ul>
+      <% @ruby_buzz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_area :question %>
+  </div>
+  <div class="field">
+    <%= f.label :answer %><br>
+    <%= f.text_area :answer %>
+  </div>
+  <div class="field">
+    <%= f.label :submission %><br>
+    <%= f.text_area :submission %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

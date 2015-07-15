@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @ruby_buzz.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @ruby_buzz.answer %>
+</p>
+
+<p>
+  <strong>Submission:</strong>
+  <%= @ruby_buzz.submission %>
+</p>
+
+<%= link_to 'Edit', edit_ruby_buzz_path(@ruby_buzz) %> |
+<%= link_to 'Back', ruby_buzzs_path %>
